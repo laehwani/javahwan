@@ -13,13 +13,13 @@ public class Matrix {
 		
 		a[2][2]= 2000;
 		b[0][2]= 10000;
-		System.out.println(a[2][2]);
-		System.out.println(b[2][2]);
-		System.out.println(a[0][2]);
+		System.out.println(a[2][2]); // 2000
+		System.out.println(b[2][2]); // 2000
+		System.out.println(a[0][2]); // 10000
 		
 		b[2] = new int[] {111, 222, 333};
-		System.out.println(a[2][2]);
-		System.out.println(b[1][2]);
+		System.out.println(a[2][2]); // 333
+		System.out.println(b[1][2]); // 30
 
 		b = new int[][] {{33,44}, {12,34}};
 		// b 에 새객체(인스턴스) 의 참조값을 할당했다.
