@@ -6,5 +6,5 @@ class MyClass01{
 
     // instance methods
     // 인스턴스가 가져야하는 기능들
-    int a = 1;
+
 }
