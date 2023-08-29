@@ -27,8 +27,6 @@ public class Array {
                 // [users] 0번째 줄과 첫번째 스캐너값이 같고
                 // [users] 1번째 줄과 두번째 스캐너값이 같다면?
                 login = true;
-                break;
-                // if 문이 참이라면 브레이크.
             }
         }
         if(login) {
