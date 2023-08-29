@@ -1,6 +1,4 @@
-package project2.Class;
-
-import org.w3c.dom.ls.LSOutput;
+package Array;
 
 public class C03class {
     public static void main(String[] args) {

@@ -6,13 +6,24 @@ public class C04array {
 
         System.out.println(a[0]);
 
-        a= method();
+        for (int i : a = method()) {
+
+
+        }
+
 
         System.out.println("a[0] : " + a[0]);
     }
 
     public static int[] method() {
         int[] k = {22, 23};
+
+
+
+
+
+
+
         return k;
     }
 }
