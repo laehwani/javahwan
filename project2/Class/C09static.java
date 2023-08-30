@@ -1,6 +1,6 @@
 package project2.Class;
 
-public class J09static {
+public class C09static {
     public static void main(String[] args) {
         MyClass09 o1 = new MyClass09();
         o1.name = "java";
