@@ -14,7 +14,7 @@ public class C25arrays {
                 new Student01("손흥민"),
                 new Student01("김민재")};
 
-//        Arrays.sort(arr2,(x,y)->x.getName().compareTo(y.getName()));
+        Arrays.sort(arr2,(x,y)->x.getName().compareTo(y.getName()));
         System.out.println(Arrays.toString(arr2));
     }
 
