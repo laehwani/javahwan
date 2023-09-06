@@ -91,6 +91,7 @@ public class C18regax {
         System.out.println("_".matches("\\w"));     // true
         System.out.println("8".matches("\\w"));     // true
         System.out.println("10".matches("\\w"));    // false
+        // 같은 뜻이지만 " " 안에 \(역슬래시) 를 쓸꺼면 두번을 써야 적용된다.
 
         // 예제 : 숫자로 시작하면 안되고, 영문 대소문자, _, $
         String pattern = "[a-zA-Z_$][a-zA-Z_$0-9]*";
@@ -114,5 +115,29 @@ public class C18regax {
         System.out.println("0212345678".matches(pattern2));
         System.out.println("021234678".matches(pattern2));
 
+        System.out.println(" ".matches("."));
+        System.out.println("a".matches("."));
+        System.out.println("3".matches("."));
+        System.out.println("+".matches("."));
+        System.out.println(".".matches("."));
+
+        // . : \.
+//        System.out.println(" ".matches(". : \\."));
+//        System.out.println("3".matches(". : \\."));
+//        System.out.println("a".matches(". : \\."));
+//        System.out.println("+".matches(". : \\."));
+//        System.out.println(".".matches(". : \\."));
+//
+//        // 이메일 패턴
+//        // 영문소문자, 숫자가 여러개 @ 영문소문자,숫자 여러개 . 영문소문자,숫자 여러개
+//        // john23@google3.co2m
+//        String a = "[a-z\\d]+\\@[a-z\\d]+\\.[a-z\\d]+";
+//        System.out.println(a);
+//
+//        //or : /
+//        System.out.println("asdfasfddf".matches(".*dog.*"));
+//        System.out.println("asdfasfddf".matches(".*cat.*"));
+//        System.out.println("asdfasfddf".matches(".*(dog|cat).*"));
+//        System.out.println("asdfasfddf".matches(".*(dog|cat).*"));
     }
 }
