@@ -55,6 +55,64 @@ public class C18regax {
         System.out.println("doooog".matches("do+g"));       // true
         System.out.println("doog".matches("do+g"));       // true
 
+        // 문자 분류 (Charactor classes)
+        System.out.println("dog".matches("d[oi]g"));   // true
+        System.out.println("dig".matches("d[oi]g"));   // true
+        System.out.println("dag".matches("d[oi]g"));   // false
+        // d 와 g 사이에 o 거나 i 거나
+
+        // 문자 분류 2
+        System.out.println("dog".matches("d[^oi]g"));   // false
+        System.out.println("dig".matches("d[^oi]g"));   // false
+        System.out.println("dag".matches("d[^oi]g"));   // true
+        // d 와 g 사이에 o 나 i 가 들어가면 안된다
+
+        System.out.println("dag".matches("d[a-x]g"));   // true
+        System.out.println("dbg".matches("d[a-x]g"));   // true
+        System.out.println("dcg".matches("d[a-x]g"));   // true
+        System.out.println("dzg".matches("d[a-x]g"));   // false
+        // d 와 g 사이에 a 부터 x 까지 아무거나 들어가도 된다
+
+        System.out.println("dag".matches("d[a-cx-z]g"));    // true
+        System.out.println("dbg".matches("d[a-cx-z]g"));    // true
+        System.out.println("dcg".matches("d[a-cx-z]g"));    // true
+        System.out.println("ddg".matches("d[a-cx-z]g"));    // false
+        System.out.println("dzg".matches("d[a-cx-z]g"));    // true
+        // d 와 g 사이에 a 부터 c , 또는 x 부터 z 까지 아무거나 들어가도 된다
+
+        // 문자 분류 기호
+        System.out.println("0".matches("[0-9]"));   // true
+        System.out.println("7".matches("[0-9]"));   // true
+        System.out.println("0".matches("\\d"));     // true
+        System.out.println("7".matches("\\d"));     // true
+        // 같은 뜻이지만 " " 안에 \(역슬래시) 를 쓸꺼면 두번을 써야 적용된다.
+
+        System.out.println("a".matches("[a-zA-Z_0-9]"));    // true
+        System.out.println("_".matches("\\w"));     // true
+        System.out.println("8".matches("\\w"));     // true
+        System.out.println("10".matches("\\w"));    // false
+
+        // 예제 : 숫자로 시작하면 안되고, 영문 대소문자, _, $
+        String pattern = "[a-zA-Z_$][a-zA-Z_$0-9]*";
+        System.out.println("pattern_1".matches(pattern)); // true
+        System.out.println("_".matches(pattern));       // true
+        System.out.println("$".matches(pattern));       // true
+        System.out.println("4".matches(pattern));       // false
+
+        // 예제 : 전화번호 패턴
+        // 010-9999-9999
+        // 02-9999-9999
+        // 02-999-9999
+        // 01099999999
+        // 0212345678
+        // 021234678
+        String pattern2 = "\\d{2,3}-?\\d{3,4}-?\\d{4}";
+        System.out.println("010-9999-9999".matches(pattern2));
+        System.out.println("02-9999-9999".matches(pattern2));
+        System.out.println("02-999-9999".matches(pattern2));
+        System.out.println("01099999999".matches(pattern2));
+        System.out.println("0212345678".matches(pattern2));
+        System.out.println("021234678".matches(pattern2));
 
     }
 }
