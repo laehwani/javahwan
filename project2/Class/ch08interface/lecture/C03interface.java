@@ -33,10 +33,13 @@ class MyClass03 implements MyInterface031, MyInterface032 {
                 MyInterface031 i1 = r;
                 // r 의 주소값을 가지지만 i1 은 031 의 메서드값만 호출가능하다
                 MyInterface032 i2 = r;
-                // r 의 주소값을 가지지만 i1 은 031 의 메서드값만 호출가능하다
+                // r 의 주소값을 가지지만 i2 은 032 의 메서드값만 호출가능하다
                 i1.method1();
+//                i1.method2();   // il 은 031 의 메서드값만 호출가능. 부모가 다르기때문에.
                 i2.method2();
-                r.method2();
+//                i2.method1();   // 위와 동일.
+                r.method2();    // 가능
+                r.method1();    // 가능
 
             }
 
