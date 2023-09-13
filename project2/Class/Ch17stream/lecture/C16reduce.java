@@ -1,4 +1,4 @@
-package project2.Class.Ch17stream.book.exam.p06;
+package project2.Class.Ch17stream.lecture;
 
 import java.util.List;
 

@@ -1,6 +1,8 @@
 package project2.Class.Ch17stream.book.exam.p06;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 class EX {
 
@@ -52,5 +54,14 @@ public class Member {
         Integer minAge = list.stream().map(m1 -> m1.getAge())
                 .reduce(Integer.MAX_VALUE, Math::min);
         System.out.println("가장 적은 나이는 : "+ minAge);
+
+        System.out.println("나이의 평균을 구하시오");
+        double avg = list.stream()
+                .mapToInt(EX::getAge)
+                        .average()
+                                .getAsDouble();
+//                .reduce(Integer::sum);
+        System.out.println("나이의 평균은 : "+avg);
+
     }
 }
