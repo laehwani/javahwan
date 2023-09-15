@@ -7,6 +7,7 @@ import java.io.Writer;
 
 public class C20buffered {
 
+
     public static void main(String[] args) {
 
         try (Writer writer = new FileWriter("C:/Temp/out9.txt")) {
