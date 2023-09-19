@@ -2,19 +2,18 @@ package project2.Class.ch18io.lecture;
 
 import java.io.File;
 
-public class C30directory {
+public class C31mkdirs {
 
     public static void main(String[] args) {
 
-        // .mkdir : 디렉토리 만들기 명령어
+        // mkdirs 여러 디렉토리 만들기
 
-        File file = new File("C:/Temp/test");
+        File file = new File("C:/test1/test2/test3");
 
         System.out.println("file.exists() : " + file.exists());
 
         if (!file.exists()) {
-            file.mkdir();
-            // .mkdir : 디렉토리 만들기 명령어
+            file.mkdirs();
         }
     }
 
